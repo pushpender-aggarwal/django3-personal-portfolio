@@ -125,3 +125,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #print(BASE_DIR + " yo baby " + STATIC_URL)
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("local settings files is not exist at the path")
