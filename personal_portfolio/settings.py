@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ci$2$+f*7a=08fm*r=d8+*kn0)5=v_t4a8kx5_9e5=o8e^*giw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pushpender.pythonanywhere.com']
 
 
 # Application definition
@@ -120,7 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-print(BASE_DIR + " yo baby " + STATIC_URL)
+#print(BASE_DIR + " yo baby " + STATIC_URL)
